@@ -6,6 +6,7 @@ from os import chdir, mkdir, listdir
 from os.path import isdir, basename
 import shutil
 
+
 # Locate folder, If not found create new folder
 def dirSearch(q, p="."):
     chdir(p)
@@ -38,7 +39,7 @@ if __name__ == "__main__":
         metadata = MP4(music)
         artist_name = metadata.get("\xa9ART")[0]
         album_name = metadata.get("\xa9alb")
-        if album_name != None:
+        if album_name is not None:
             album_name = album_name[0]
         tmp = []
         artist_name = charReplace(artist_name)
@@ -52,7 +53,7 @@ if __name__ == "__main__":
             artist_name = artist_name.split(";")[0]
         dirSearch(artist_name)
         # Only process album value if not empty
-        if album_name != None:
+        if album_name is not None:
             album_name = charReplace(album_name)
             dirSearch(q=album_name, p=artist_name)
             chdir("..")
