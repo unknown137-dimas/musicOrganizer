@@ -3,7 +3,7 @@ from os import chdir, remove, listdir
 from os.path import isdir
 import glob
 import shutil
-from musicOrganizer_v2 import charReplace
+from musicOrganizer import charReplace
 
 if __name__ == "__main__":
     # Go to musicPath & Get music file
