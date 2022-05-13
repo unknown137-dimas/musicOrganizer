@@ -9,7 +9,7 @@ if __name__ == "__main__":
     # Go to musicPath & Get music file
     musicPath = 'D:/music'
     chdir(musicPath)
-    musicFiles = glob.glob('**/*.m4a', recursive=True)
+    musicFiles = glob.glob('**/*.m4a',recursive=True)
     # Remove mismatch album inside artist folder
     for music in musicFiles:
         try:
